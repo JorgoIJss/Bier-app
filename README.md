@@ -1,3 +1,34 @@
+# Bier-app
+
+Een React applicatie voor het beheren van een bierlijst, met automatische deployments via GitHub Actions en Vercel.
+
+## Features
+
+- Bierlijst beheer
+- Automatische deployments
+- CI/CD pipeline
+- Vercel hosting
+
+## Development
+
+```bash
+# Installeer dependencies
+npm install
+
+# Start development server
+npm start
+
+# Run tests
+npm test
+
+# Build voor productie
+npm run build
+```
+
+## Deployment
+
+De applicatie wordt automatisch gedeployed naar Vercel wanneer er wijzigingen worden gepusht naar de master branch.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
