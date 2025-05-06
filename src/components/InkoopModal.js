@@ -118,7 +118,7 @@ const InkoopModal = ({ onClose, onAddBeer }) => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="prijs">Prijs (â‚¬) *</label>
+                        <label htmlFor="prijs">Prijs (€) *</label>
                         <input
                             type="number"
                             id="prijs"
