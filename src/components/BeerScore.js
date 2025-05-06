@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 
 const stars = [1, 2, 3, 4, 5];
 
@@ -16,7 +16,7 @@ const BeerScore = ({ beerId, score, onVote }) => {
                                 color: star <= score ? "gold" : "gray" 
                             }}
                         >
-                            ★
+                            â˜…
                         </span>
                     ))}
                 </div>
@@ -28,7 +28,7 @@ const BeerScore = ({ beerId, score, onVote }) => {
                             onClick={() => onVote(beerId, star)}
                             style={{ cursor: "pointer", color: "gray" }}
                         >
-                            ★
+                            â˜…
                         </span>
                     ))}
                 </div>

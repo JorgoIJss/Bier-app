@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import BeerRow from './BeerRow';
 
 const BeerList = ({ beers, votedBeers, handleBeerVote, preferences, sortField, sortDirection }) => {

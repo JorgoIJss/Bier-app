@@ -1,4 +1,4 @@
-// pages/api/test-edge-config.js
+﻿// pages/api/test-edge-config.js
 import { get } from '@vercel/edge-config';
 
 export default async function handler(req, res) {

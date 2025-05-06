@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const BeerFilters = ({ filters, onFilterChange, onResetFilters }) => {
     return (
@@ -35,10 +35,10 @@ const BeerFilters = ({ filters, onFilterChange, onResetFilters }) => {
                     onChange={(e) => onFilterChange('price', e.target.value)}
                 >
                     <option value="">Alle</option>
-                    <option value="0-2.5">€0 - €2.50</option>
-                    <option value="2.5-3.5">€2.50 - €3.50</option>
-                    <option value="3.5-5.5">€3.50 - €5.50</option>
-                    <option value="5.5+">€5.50+</option>
+                    <option value="0-2.5">â‚¬0 - â‚¬2.50</option>
+                    <option value="2.5-3.5">â‚¬2.50 - â‚¬3.50</option>
+                    <option value="3.5-5.5">â‚¬3.50 - â‚¬5.50</option>
+                    <option value="5.5+">â‚¬5.50+</option>
                 </select>
             </div>
 

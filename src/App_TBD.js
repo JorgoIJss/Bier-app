@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import "./App.css";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
@@ -234,7 +234,7 @@ const App = () => {
                             onClick={() => !hasVoted && handleBeerScore(beerId, star)}
                             style={{cursor: 'pointer', color: star <= currentScore ? 'gold' : 'gray'}}
                         >
-                            ★
+                            â˜…
                         </span>
                     )))
                 }

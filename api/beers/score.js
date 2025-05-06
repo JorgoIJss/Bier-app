@@ -1,4 +1,4 @@
-// pages/api/beers/score.js
+﻿// pages/api/beers/score.js
 import { Pool } from 'pg';
 import requestIp from 'request-ip';
 

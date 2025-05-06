@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
+﻿import React, { useState, useEffect, useMemo, useRef } from "react";
 import "./App.css";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
@@ -56,7 +56,7 @@ const CollapsibleBeerRow = ({ beer, votedBeers, handleBeerVote, preferences }) =
                 <span className="beer-color-indicator" style={{ backgroundColor: getPriceColor(beer.prijs) }}></span>
                 <span className="beer-name">{beer.naam}</span>
                 <span className="beer-type">{beer.type}</span>
-                {!isStriked && <span className="expand-icon">{isOpen ? "▼" : "►"}</span>}
+                {!isStriked && <span className="expand-icon">{isOpen ? "â–¼" : "â–º"}</span>}
             </div>
             {isOpen && !isStriked && (
                 <div className="beer-details">
@@ -66,7 +66,7 @@ const CollapsibleBeerRow = ({ beer, votedBeers, handleBeerVote, preferences }) =
                     </div>
                     <div className="beer-detail-row">
                         <div className="beer-detail-label"><strong>Prijs:</strong></div>
-                        <div className="beer-detail-value">€{parseFloat(beer.prijs).toFixed(2)}</div>
+                        <div className="beer-detail-value">â‚¬{parseFloat(beer.prijs).toFixed(2)}</div>
                     </div>
                     <div className="beer-detail-row">
                         <div className="beer-detail-label"><strong>Alcohol %:</strong></div>
@@ -867,7 +867,7 @@ const App = () => {
                         beer.brouwer || beer.brouwerij,
                     beer.type,
                         `${beer.alcoholpercentage || beer.alcohol}%`,
-                    `€${parseFloat(beer.prijs).toFixed(2)}`,
+                    `â‚¬${parseFloat(beer.prijs).toFixed(2)}`,
                         beer.avg_score || '-',
                         beer.status,
                 ]),
@@ -1495,32 +1495,32 @@ const App = () => {
                                                     <tr>
                                                         <th>
                                                             <div onClick={() => handleSort('naam')}>
-                                                                Naam {sortField === 'naam' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Naam {sortField === 'naam' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>
                                                             <div onClick={() => handleSort('brouwer')}>
-                                                                Brouwerij {sortField === 'brouwer' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Brouwerij {sortField === 'brouwer' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>
                                                             <div onClick={() => handleSort('type')}>
-                                                                Type {sortField === 'type' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Type {sortField === 'type' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>
                                                             <div onClick={() => handleSort('prijs')}>
-                                                                Prijs {sortField === 'prijs' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Prijs {sortField === 'prijs' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>
                                                             <div onClick={() => handleSort('status')}>
-                                                                Status {sortField === 'status' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Status {sortField === 'status' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>
                                                             <div onClick={() => handleSort('avg_score')}>
-                                                                Score {sortField === 'avg_score' && (sortOrder === 'asc' ? '▲' : '▼')}
+                                                                Score {sortField === 'avg_score' && (sortOrder === 'asc' ? 'â–²' : 'â–¼')}
                                                             </div>
                                                         </th>
                                                         <th>Acties</th>
@@ -1538,7 +1538,7 @@ const App = () => {
                                                             <td>{beer.naam}</td>
                                                             <td>{beer.brouwer || beer.brouwerij}</td>
                                                             <td>{beer.type}</td>
-                                                            <td>€{parseFloat(beer.prijs).toFixed(2)}</td>
+                                                            <td>â‚¬{parseFloat(beer.prijs).toFixed(2)}</td>
                                                             <td>{beer.status}</td>
                                                             <td>{beer.avg_score || '-'}</td>
                                                             <td>
@@ -1595,7 +1595,7 @@ const App = () => {
                                                         <div>{selectedBeerDetails.alcoholpercentage || selectedBeerDetails.alcohol}%</div>
                                                         
                                                         <div className="font-semibold">Prijs:</div>
-                                                        <div>€{parseFloat(selectedBeerDetails.prijs).toFixed(2)}</div>
+                                                        <div>â‚¬{parseFloat(selectedBeerDetails.prijs).toFixed(2)}</div>
                                                         
                                                         <div className="font-semibold">Score:</div>
                                                         <div>{selectedBeerDetails.avg_score || '-'}</div>
@@ -1632,7 +1632,7 @@ const App = () => {
                                                                             {new Date(inkoop.inkoopdatum).toLocaleDateString('nl-NL')}
                                                                         </td>
                                                                         <td className="p-2">{inkoop.leverancier}</td>
-                                                                        <td className="p-2">€{parseFloat(inkoop.inkoopprijs).toFixed(2)}</td>
+                                                                        <td className="p-2">â‚¬{parseFloat(inkoop.inkoopprijs).toFixed(2)}</td>
                                                                         <td className="p-2">{inkoop.inkoopaantal}</td>
                                                                         <td className="p-2">
                         <button
@@ -1694,10 +1694,10 @@ const App = () => {
                                                                 <td>{beer?.naam || 'Onbekend'}</td>
                                                                 <td>{beer?.brouwer || beer?.brouwerij || 'Onbekend'}</td>
                                                                 <td>{beer?.type || 'Onbekend'}</td>
-                                                                <td>€{beer ? parseFloat(beer.prijs).toFixed(2) : '0.00'}</td>
+                                                                <td>â‚¬{beer ? parseFloat(beer.prijs).toFixed(2) : '0.00'}</td>
                                                                 <td>{new Date(inkoop.inkoopdatum).toLocaleDateString('nl-NL')}</td>
                                                                 <td>{inkoop.leverancier}</td>
-                                                                <td>€{parseFloat(inkoop.inkoopprijs).toFixed(2)}</td>
+                                                                <td>â‚¬{parseFloat(inkoop.inkoopprijs).toFixed(2)}</td>
                                                                 <td>{inkoop.inkoopaantal}</td>
                                                                 <td>
                         <button
@@ -1775,7 +1775,7 @@ const App = () => {
                                                             <td>{beer.naam}</td>
                                                             <td>{beer.brouwer || beer.brouwerij}</td>
                                                             <td>{beer.type}</td>
-                                                            <td>€{parseFloat(beer.prijs).toFixed(2)}</td>
+                                                            <td>â‚¬{parseFloat(beer.prijs).toFixed(2)}</td>
                                                             <td>{beer.status}</td>
                                                             <td>{beer.koelkast || '-'}</td>
                                                             <td>{new Date(beer.gildeavond_date).toLocaleDateString('nl-NL')}</td>
@@ -1917,7 +1917,7 @@ const App = () => {
                                 </div>
                                 <p className="mb-2">Geselecteerde bieren: {selectedBeers.length}</p>
                                 <div className="modal-buttons">
-                                    <button onClick={handleCopySelectedBeers}>Kopiëren naar Gildeavond</button>
+                                    <button onClick={handleCopySelectedBeers}>KopiÃ«ren naar Gildeavond</button>
                                     <button onClick={handleCloseGildeavondModal}>Annuleren</button>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import BeerScore from '../BeerScore';
 
 const BeerRow = ({ beer, votedBeers, handleBeerVote, preferences }) => {
@@ -36,7 +36,7 @@ const BeerRow = ({ beer, votedBeers, handleBeerVote, preferences }) => {
                 <div className="beer-name">
                     {beer.naam}
                 </div>
-                <div className="beer-price">€{(parseFloat(beer.prijs) || 0).toFixed(2)}</div>
+                <div className="beer-price">â‚¬{(parseFloat(beer.prijs) || 0).toFixed(2)}</div>
                 <div className="beer-score">
                     <BeerScore 
                         beerId={beer.id}

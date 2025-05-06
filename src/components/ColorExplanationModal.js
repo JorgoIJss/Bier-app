@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const ColorExplanationModal = ({ showColorExplanation, toggleColorExplanation }) => {
   // Conditionally render the modal based on showColorExplanation
@@ -9,7 +9,7 @@ const ColorExplanationModal = ({ showColorExplanation, toggleColorExplanation })
   return (
     <div className="modal">
       <div className="modal-content">
-        <span className="close-button" onClick={toggleColorExplanation}>×</span>
+        <span className="close-button" onClick={toggleColorExplanation}>Ã—</span>
         <h2>Uitleg Kleuren</h2>
         <table>
           <thead>
@@ -21,19 +21,19 @@ const ColorExplanationModal = ({ showColorExplanation, toggleColorExplanation })
           <tbody>
             <tr>
               <td><span className="color-box green"></span></td>
-              <td> {"<= €2,50"}</td>
+              <td> {"<= â‚¬2,50"}</td>
             </tr>
             <tr>
               <td><span className="color-box blue"></span></td>
-              <td> {"<= €3,50"}</td>
+              <td> {"<= â‚¬3,50"}</td>
             </tr>
             <tr>
               <td><span className="color-box yellow"></span></td>
-              <td> {"<= €5,50"}</td>
+              <td> {"<= â‚¬5,50"}</td>
             </tr>
             <tr>
               <td><span className="color-box lightpink"></span></td>
-              <td> {"<= €10"}</td>
+              <td> {"<= â‚¬10"}</td>
             </tr>
           </tbody>
         </table>

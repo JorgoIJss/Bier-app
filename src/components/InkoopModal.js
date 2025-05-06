@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const InkoopModal = ({ onClose, onAddBeer }) => {
@@ -118,7 +118,7 @@ const InkoopModal = ({ onClose, onAddBeer }) => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="prijs">Prijs (€) *</label>
+                        <label htmlFor="prijs">Prijs (â‚¬) *</label>
                         <input
                             type="number"
                             id="prijs"

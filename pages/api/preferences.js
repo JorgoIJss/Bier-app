@@ -1,4 +1,4 @@
-// pages/api/preferences.js
+﻿// pages/api/preferences.js
 import { Pool } from 'pg';
 
 const pool = new Pool({
